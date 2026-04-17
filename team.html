@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | ReBatts Anchor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.5; color: #1a2a2a; }
+        
+        .navbar {
+            background: #15581C;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #ffffff; text-decoration: none; }
+        .logo span { color: rgba(255,255,255,0.7); font-weight: 400; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.85rem; }
+        .nav-links a:hover, .nav-links a.active { opacity: 0.8; }
+        .mobile-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
+        
+        .page-header {
+            background: linear-gradient(135deg, #15581C 0%, #1a6a22 50%, #0e3d13 100%);
+            color: white;
+            padding: 120px 0 60px;
+            margin-top: 60px;
+        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .page-header h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 1rem; }
+        .page-header .chapter { color: rgba(255,255,255,0.7); font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 1rem; }
+        
+        section { padding: 60px 0; }
+        .section-title { font-size: 1.6rem; font-weight: 600; margin-bottom: 2rem; color: #15581C; }
+        .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .team-card { background: #f5f7f5; border-radius: 8px; overflow: hidden; }
+        .team-info { padding: 1.5rem; }
+        .team-info h3 { font-size: 1.2rem; color: #15581C; margin-bottom: 0.25rem; font-weight: 600; }
+        .team-title { color: #1a6a22; font-weight: 500; font-size: 0.8rem; margin-bottom: 0.25rem; }
+        .team-degree { font-size: 0.75rem; color: #8a9a8a; margin-bottom: 1rem; }
+        .publications { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e5e0; }
+        .publications p { font-size: 0.7rem; margin-bottom: 0.25rem; color: #5a6a5a; }
+        .publication-title { font-style: italic; color: #15581C; }
+        
+        .image-placeholder {
+            background: #f5f7f5;
+            border: 1px dashed #c0ccc0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            margin: 1rem 0;
+        }
+        .placeholder-text { text-align: center; color: #8a9a8a; }
+        .placeholder-text i { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+        .placeholder-text span { font-size: 0.7rem; }
+        
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+        .value-card { text-align: center; padding: 1.5rem; background: #f5f7f5; border-radius: 8px; }
+        .value-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+        .value-card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #15581C; font-weight: 600; }
+        .value-card p { font-size: 0.8rem; color: #5a6a5a; line-height: 1.5; }
+        
+        footer { background: #15581C; color: white; padding: 2rem 0; margin-top: 2rem; }
+        .footer-bottom { text-align: center; font-size: 0.75rem; opacity: 0.7; }
+        .btn-back { display: inline-block; background: #15581C; color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.85rem; margin-top: 2rem; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu { display: block; }
+            .team-grid, .grid-3 { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Re<span>Batts</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html">01 About</a></li>
+                <li><a href="team.html" class="active">02 Team</a></li>
+                <li><a href="community.html">03 Community</a></li>
+                <li><a href="technology.html">04 Technology</a></li>
+                <li><a href="financial.html">05 Financial</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="chapter">CHAPTER 02</div>
+            <h1>ReBatts Anchor</h1>
+            <p style="max-width: 600px; opacity: 0.85;">Our strength lies in world-class scientific leadership — combining deep academic expertise with real-world industry experience.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="image-placeholder">
+                        <div class="placeholder-text">
+                            <i>👨‍🔬</i>
+                            <span>Dr. Mohd Muzamir Mahat Photo<br>(Upload image)</span>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Mohd Muzamir Mahat</h3>
+                        <div class="team-title">Co-Founder / CSO</div>
+                        <div class="team-degree">Ph.D. Materials Science & Engineering, Imperial College London (2013–2017)</div>
+                        <p style="font-size: 0.8rem;">Battery Recycling & Clean-Energy Innovations</p>
+                        <p style="font-size: 0.75rem; margin-top: 0.5rem;">Principal Investigator on a <strong>RM1.2 million PETRONAS-funded project</strong> on polymer membranes for battery recycling. Panel of Expert to Malaysia's Department of Environment (DOE) on Blackmass Classification and Recovery Processes.</p>
+                        <div class="publications">
+                            <p><span class="publication-title">Integration of Solid Polymer Electrolyte for LIB Recycling</span> (2025, Journal of Energy Storage)</p>
+                            <p><span class="publication-title">Upscaling Lithium Recovery via Electrochemical Method: A Review</span> (2024, RSC Advances)</p>
+                            <p><span class="publication-title">Polymer Electrolyte Advances in LIB Recycling</span> (2024, Journal of Electroanalytical Chemistry)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="image-placeholder">
+                        <div class="placeholder-text">
+                            <i>👨‍🔬</i>
+                            <span>Dr. Ching-Hong Tan Photo<br>(Upload image)</span>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Ching-Hong Tan</h3>
+                        <div class="team-title">Founder / CEO</div>
+                        <div class="team-degree">Ph.D. Physical Chemistry, Imperial College London (2013–2017)</div>
+                        <p style="font-size: 0.75rem;">Over <strong>10 years</strong> in renewable energy, battery materials, recycling chemistry, and green technology. Postdoctoral fellow at Shanghai Jiao Tong University and South China University of Technology.</p>
+                        <p style="font-size: 0.75rem;"><strong>30+ publications</strong> in high-impact journals including Advanced Materials and Advanced Energy Materials</p>
+                        <div class="publications">
+                            <p><span class="publication-title">High-Efficiency P3HT-based Polymer Solar Cells</span> (2016, Nature Communications)</p>
+                            <p><span class="publication-title">Robust Nonfullerene Solar Cells Approaching Unity EQE</span> (2018, Nature Communications)</p>
+                            <p>Led manganese and iron-based battery development projects; guest expert contributor to The Star Malaysia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h2 class="section-title">Mission & Core Values</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; font-size: 0.9rem;">ReBatts is devoted to supporting Malaysia's ESG commitments through innovative, environmentally sound, and commercially viable LIB recycling — creating enduring value for society, industry, and our planet.</p>
+                
+                <div class="grid-3">
+                    <div class="value-card">
+                        <div class="value-icon">💡</div>
+                        <h3>Innovation</h3>
+                        <p>We pioneer cutting-edge, cost-efficient technologies for LIB recycling, making advanced and affordable battery solutions accessible to all.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌿</div>
+                        <h3>Environmental Protection</h3>
+                        <p>Every battery rejuvenated through our system reduces Malaysia's ecological footprint, advancing its ESG and low-carbon aspirations.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Mutual Success</h3>
+                        <p>Success extends beyond economics — delivering social and environmental dividends that empower current and future generations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn-back">← Back to Home</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReBatts. A subsidiary of KHL Recycling.</p>
+                <p style="margin-top: 0.5rem;">Recycling Battery, Recharging the Future!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-links');
+            if (nav.style.display === 'flex') nav.style.display = 'none';
+            else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = '#15581C';
+                nav.style.padding = '1rem';
+                nav.style.textAlign = 'center';
+            }
+        });
+    </script>
+</body>
+</html>
