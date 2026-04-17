@@ -1,1 +1,615 @@
-<iframe src="https://gamma.app/embed/4h0dmnlhjsfld9c" style="width: 700px; max-width: 100%; height: 450px" allow="fullscreen" title="Untitled"></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReBatts | Sustainable Lithium-Ion Battery Recycling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           ReBatts Brand Theme - Color: #15581C
+        ============================================ */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            color: #1a2a2a;
+            background-color: #ffffff;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #15581C;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: rgba(255,255,255,0.7);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: opacity 0.3s;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #15581C 0%, #1a6a22 50%, #0e3d13 100%);
+            color: white;
+            padding: 160px 0 100px;
+            margin-top: 60px;
+        }
+
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-tagline {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            max-width: 550px;
+            margin-bottom: 2rem;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #15581C;
+            letter-spacing: -0.3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: #5a6a5a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: #f5f7f5;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #15581C;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #5a6a5a;
+            margin-top: 0.5rem;
+        }
+
+        /* Cards */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .card {
+            background: #f5f7f5;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            background: #e8ede8;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #15581C;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: #5a6a5a;
+            line-height: 1.6;
+        }
+
+        /* Chapter Cards */
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .chapter-card {
+            background: #ffffff;
+            border: 1px solid #e0e5e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .chapter-card:hover {
+            border-color: #15581C;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .chapter-number {
+            color: #15581C;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .chapter-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #15581C;
+        }
+
+        .chapter-card p {
+            font-size: 0.85rem;
+            color: #5a6a5a;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .chapter-link {
+            color: #15581C;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #15581C;
+            color: white;
+            text-align: center;
+            padding: 4rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .cta-section p {
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn-cta:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* Footer */
+        footer {
+            background: #15581C;
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: rgba(255,255,255,0.7);
+            font-weight: 400;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .footer-links a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .tagline {
+            color: rgba(255,255,255,0.8);
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .grid-3, .grid-4, .stats-grid, .chapters-grid, .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .cta-section {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+                display: inline-block;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Re<span>Batts</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html">01 About</a></li>
+                <li><a href="team.html">02 Team</a></li>
+                <li><a href="community.html">03 Community</a></li>
+                <li><a href="technology.html">04 Technology</a></li>
+                <li><a href="financial.html">05 Financial</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-badge">A SUBSIDIARY OF KHL RECYCLING</div>
+            <h1>A Sustainable Solution<br>to Recharge</h1>
+            <div class="hero-tagline">Recycling Battery, Recharging the Future!</div>
+            <p>ReBatts is pioneering the future of lithium-ion battery recycling — recovering precious minerals, reducing e-waste, and powering Malaysia's transition to a clean energy economy.</p>
+            <a href="about.html" class="btn-primary">Explore ReBatts →</a>
+            <a href="financial.html" class="btn-outline">Investment Opportunity →</a>
+        </div>
+    </section>
+
+    <!-- Contents / Chapters Overview -->
+    <section style="background: #f5f7f5;">
+        <div class="container">
+            <h2 class="section-title">What's Inside</h2>
+            <p class="section-subtitle">A comprehensive look at ReBatts — from our mission and technology to our team, product offerings, and financial outlook.</p>
+            
+            <div class="chapters-grid">
+                <div class="chapter-card">
+                    <div class="chapter-number">CHAPTER 01</div>
+                    <h3>About ReBatts</h3>
+                    <p>Our origin, purpose, and the global energy challenge we address.</p>
+                    <a href="about.html" class="chapter-link">Read More →</a>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">CHAPTER 02</div>
+                    <h3>ReBatts Anchor</h3>
+                    <p>The expert founders and researchers driving our innovation.</p>
+                    <a href="team.html" class="chapter-link">Read More →</a>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">CHAPTER 03</div>
+                    <h3>Community Engagement</h3>
+                    <p>How we connect with Malaysia's sustainability ecosystem.</p>
+                    <a href="community.html" class="chapter-link">Read More →</a>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">CHAPTER 04</div>
+                    <h3>Technology & Products</h3>
+                    <p>Our hydrometallurgical and electrochemical recycling solutions.</p>
+                    <a href="technology.html" class="chapter-link">Read More →</a>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">CHAPTER 05</div>
+                    <h3>Financial Forecast</h3>
+                    <p>Projected growth and investment opportunity.</p>
+                    <a href="financial.html" class="chapter-link">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Recovery Rate Target</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2050</div>
+                    <div class="stat-label">Lithium Shortage</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Publications</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">RM1.2M</div>
+                    <div class="stat-label">PETRONAS Project</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem / Response / Opportunity -->
+    <section style="background: #f5f7f5;">
+        <div class="container">
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>The Problem</h3>
+                    <p>Global lithium resources are finite, with expected shortages by 2050 — while e-waste volumes are surging year on year.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">♻️</div>
+                    <h3>Our Response</h3>
+                    <p>We recover lithium and critical minerals with minimal environmental impact, feeding them back into the battery supply chain.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>The Opportunity</h3>
+                    <p>McKinsey confirms that sourcing recycled materials for LIB manufacturing significantly reduces carbon emissions industry-wide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="container">
+        <div class="cta-section">
+            <h2>Recycling Battery, Recharging the Future!</h2>
+            <p>Join us in powering Malaysia's transition to a clean energy economy.</p>
+            <a href="financial.html" class="btn-cta">Become a Partner →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">Re<span>Batts</span></div>
+                    <p style="font-size: 0.75rem; opacity: 0.7;">A SUBSIDIARY OF KHL RECYCLING</p>
+                    <div class="tagline">Recycling Battery, Recharging the Future!</div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="team.html">Our Team</a>
+                    <a href="technology.html">Technology</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="community.html">Community</a>
+                    <a href="financial.html">Investors</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <a href="#">hello@rebatts.com</a>
+                    <a href="#">+603 1234 5678</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReBatts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-links');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = '#15581C';
+                nav.style.padding = '1rem';
+                nav.style.textAlign = 'center';
+                nav.style.gap = '1rem';
+            }
+        });
+    </script>
+</body>
+</html>
