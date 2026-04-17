@@ -3,69 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ReBatts | Investor Overview</title>
+<title>ReBatts</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --bg: #0a0f1c;
+  --card: rgba(255,255,255,0.04);
+  --text: #e6e9ef;
+  --muted: #9aa4b2;
+  --accent: #22c55e;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
 body {
-  margin:0;
-  font-family: "Segoe UI", sans-serif;
-  background:#0b0f19;
-  color:#e5e7eb;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-section {
-  padding: 80px 10%;
-  border-bottom: 1px solid #1f2937;
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 20px;
 }
 
-h1 { font-size: 48px; }
-h2 { font-size: 32px; margin-bottom:20px; }
-h3 { margin-bottom:10px; }
+/* Typography */
+h1 { font-size: 56px; font-weight: 700; letter-spacing: -1px; }
+h2 { font-size: 36px; margin-bottom: 20px; }
+p { color: var(--muted); }
 
+/* Hero */
 .hero {
-  text-align:center;
-  background: linear-gradient(135deg, #0b0f19, #111827);
+  text-align: center;
+  padding: 140px 20px 100px;
+  background: radial-gradient(circle at top, #111827, #020617);
 }
 
-.highlight {
-  color:#22c55e;
+.hero p {
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-.grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap:30px;
-}
-
-.card {
-  background:#111827;
-  padding:25px;
-  border-radius:10px;
-}
-
-.metric {
-  font-size:28px;
-  font-weight:bold;
-  color:#22c55e;
-}
-
+/* Button */
 .btn {
   display:inline-block;
-  margin-top:20px;
-  background:#22c55e;
-  color:white;
-  padding:14px 24px;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:bold;
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
 }
 
-.center { text-align:center; }
+.btn:hover { transform: translateY(-2px); }
 
+/* Grid */
+.grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Section divider */
+.section {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Highlight */
+.highlight {
+  color: var(--accent);
+}
+
+/* Footer */
 footer {
   text-align:center;
-  padding:40px;
-  background:#020617;
+  padding:60px 20px;
+  color: var(--muted);
 }
 </style>
 </head>
@@ -76,150 +110,119 @@ footer {
 <section class="hero">
   <h1>ReBatts</h1>
   <p class="highlight">Recycling Battery, Recharging the Future</p>
-  <p>Next-generation lithium-ion battery recycling platform</p>
+  <p>
+    Transforming battery waste into critical materials through next-generation
+    electrochemical recycling technology.
+  </p>
   <a href="#contact" class="btn">Partner / Invest</a>
 </section>
 
 <!-- PROBLEM -->
-<section>
-  <h2>⚠️ Global Energy & Resource Crisis</h2>
+<section class="container section">
+  <h2>The Coming Resource Bottleneck</h2>
   <div class="grid">
     <div class="card">
-      <div class="metric">2050</div>
-      <p>Lithium supply shortage projected</p>
+      <h3 class="highlight">Lithium Shortage</h3>
+      <p>Global supply constraints expected by 2050 threaten energy transition.</p>
     </div>
     <div class="card">
-      <div class="metric">↑ E-Waste</div>
-      <p>Explosive growth in battery waste globally</p>
+      <h3 class="highlight">E-Waste Explosion</h3>
+      <p>Battery waste growing exponentially across EV and electronics sectors.</p>
     </div>
     <div class="card">
-      <div class="metric">Inefficient</div>
-      <p>Current recycling methods are costly & polluting</p>
+      <h3 class="highlight">Inefficient Recycling</h3>
+      <p>Current methods are energy-intensive, costly, and environmentally harmful.</p>
     </div>
   </div>
 </section>
 
 <!-- SOLUTION -->
-<section>
-  <h2>💡 ReBatts Solution</h2>
+<section class="container section">
+  <h2>Our Solution</h2>
   <p>
-    We combine <span class="highlight">hydrometallurgical</span> and
-    <span class="highlight">electrochemical</span> technologies to achieve:
+    A hybrid <span class="highlight">electrochemical + hydrometallurgical</span> platform
+    designed for efficiency, scalability, and sustainability.
   </p>
-  <div class="grid">
+
+  <div class="grid" style="margin-top:40px;">
     <div class="card">Near 100% material recovery</div>
-    <div class="card">Low energy consumption</div>
-    <div class="card">Environmentally sustainable process</div>
+    <div class="card">Lower energy consumption</div>
+    <div class="card">Minimal environmental impact</div>
   </div>
 </section>
 
 <!-- TECHNOLOGY -->
-<section>
-  <h2>🔬 Technology Differentiation</h2>
+<section class="container section">
+  <h2>Technology Advantage</h2>
   <div class="grid">
     <div class="card">
       <h3>Electrochemical Recovery</h3>
-      <p>Advanced ion-selective membrane systems enabling efficient lithium extraction</p>
+      <p>Ion-selective membrane systems enabling precise lithium extraction.</p>
     </div>
     <div class="card">
       <h3>Hydrometallurgy</h3>
-      <p>High-efficiency leaching with low-corrosion reagents</p>
+      <p>Optimized chemical processes with high efficiency and low corrosion.</p>
     </div>
     <div class="card">
-      <h3>Scalability</h3>
-      <p>Designed for industrial deployment and cost optimization</p>
+      <h3>Scalable Platform</h3>
+      <p>Built for industrial deployment and integration into supply chains.</p>
     </div>
   </div>
 </section>
 
 <!-- MARKET -->
-<section>
-  <h2>📈 Market Opportunity</h2>
+<section class="container section">
+  <h2>Massive Market Opportunity</h2>
   <p>
-    Driven by EV adoption and renewable energy storage, the lithium-ion battery
-    recycling market is rapidly expanding.
+    The battery recycling market is expanding rapidly with EV adoption,
+    renewable storage demand, and ESG-driven regulation.
   </p>
+</section>
+
+<!-- BUSINESS -->
+<section class="container section">
+  <h2>Business Model</h2>
   <div class="grid">
-    <div class="card">EV Growth</div>
-    <div class="card">Energy Storage Expansion</div>
-    <div class="card">ESG Regulations</div>
+    <div class="card">Recovered metals (Li, Ni, Co, Mn)</div>
+    <div class="card">Upcycled battery materials</div>
+    <div class="card">Direct resale to manufacturers</div>
   </div>
 </section>
 
-<!-- BUSINESS MODEL -->
-<section>
-  <h2>💰 Business Model</h2>
+<!-- CREDIBILITY -->
+<section class="container section">
+  <h2>Scientific Credibility</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Recovered Metals</h3>
-      <p>Lithium, Nickel, Cobalt, Manganese</p>
-    </div>
-    <div class="card">
-      <h3>Upcycled Materials</h3>
-      <p>Battery-grade materials for reuse</p>
-    </div>
-    <div class="card">
-      <h3>Direct Resale</h3>
-      <p>Supplying global battery manufacturers</p>
-    </div>
-  </div>
-</section>
-
-<!-- TRACTION -->
-<section>
-  <h2>🚀 Traction & Credibility</h2>
-  <div class="grid">
-    <div class="card">30+ Publications</div>
-    <div class="card">Funded Research Projects</div>
-    <div class="card">Government Advisory Roles</div>
+    <div class="card">30+ publications</div>
+    <div class="card">Funded research projects</div>
+    <div class="card">Government advisory roles</div>
   </div>
 </section>
 
 <!-- TEAM -->
-<section>
-  <h2>👨‍🔬 Founding Team</h2>
+<section class="container section">
+  <h2>Founding Team</h2>
   <div class="grid">
     <div class="card">
       <h3>Dr. Ching-Hong Tan</h3>
-      <p>CEO | Renewable energy, perovskites, advanced materials</p>
+      <p>CEO — Renewable energy & advanced materials</p>
     </div>
     <div class="card">
       <h3>Dr. Mohd Muzamir Mahat</h3>
-      <p>CSO | Electrochemical battery recycling expert</p>
+      <p>CSO — Electrochemical recycling expert</p>
     </div>
-  </div>
-</section>
-
-<!-- IMPACT -->
-<section>
-  <h2>🌍 ESG Impact</h2>
-  <div class="grid">
-    <div class="card">Carbon Reduction</div>
-    <div class="card">Circular Economy</div>
-    <div class="card">E-waste Mitigation</div>
-  </div>
-</section>
-
-<!-- FINANCIAL -->
-<section>
-  <h2>📊 Financial Outlook</h2>
-  <p>
-    Strong projected growth driven by increasing battery demand and recycling needs.
-  </p>
-  <div class="card center">
-    <p>(Insert your 7-year projection graph here later)</p>
   </div>
 </section>
 
 <!-- CTA -->
-<section id="contact" class="center">
-  <h2>🚀 Join the Transition</h2>
-  <p>We are seeking strategic partners and investors</p>
-  <a href="mailto:chinghong.imperial@gmail.com" class="btn">Contact Us</a>
+<section id="contact" class="container section" style="text-align:center;">
+  <h2>Build the Future of Energy With Us</h2>
+  <p>We are seeking partners, investors, and collaborators.</p>
+  <a href="mailto:chinghong.imperial@gmail.com" class="btn">Get in Touch</a>
 </section>
 
 <footer>
-  <p>© 2026 ReBatts | Investor Deck Landing Page</p>
+  © 2026 ReBatts
 </footer>
 
 </body>
