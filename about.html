@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ReBatts | Sustainable Battery Recycling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.5; color: #1a2a2a; }
+        
+        .navbar {
+            background: #15581C;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #ffffff; text-decoration: none; }
+        .logo span { color: rgba(255,255,255,0.7); font-weight: 400; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.85rem; }
+        .nav-links a:hover, .nav-links a.active { opacity: 0.8; }
+        .mobile-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
+        
+        .page-header {
+            background: linear-gradient(135deg, #15581C 0%, #1a6a22 50%, #0e3d13 100%);
+            color: white;
+            padding: 120px 0 60px;
+            margin-top: 60px;
+        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .page-header h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 1rem; }
+        .page-header .chapter { color: rgba(255,255,255,0.7); font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 1rem; }
+        
+        section { padding: 60px 0; }
+        .section-title { font-size: 1.6rem; font-weight: 600; margin-bottom: 2rem; color: #15581C; }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .card { background: #f5f7f5; padding: 1.5rem; border-radius: 8px; }
+        .card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; color: #15581C; font-weight: 600; }
+        .card p { font-size: 0.85rem; color: #5a6a5a; line-height: 1.6; }
+        .card-icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
+        
+        .image-placeholder {
+            background: #f5f7f5;
+            border: 1px dashed #c0ccc0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+            margin: 2rem 0;
+        }
+        .placeholder-text { text-align: center; color: #8a9a8a; }
+        .placeholder-text i { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
+        .placeholder-text span { font-size: 0.8rem; }
+        
+        footer {
+            background: #15581C;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        .footer-bottom { text-align: center; font-size: 0.75rem; opacity: 0.7; }
+        .btn-back { display: inline-block; background: #15581C; color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.85rem; margin-top: 2rem; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu { display: block; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Re<span>Batts</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html" class="active">01 About</a></li>
+                <li><a href="team.html">02 Team</a></li>
+                <li><a href="community.html">03 Community</a></li>
+                <li><a href="technology.html">04 Technology</a></li>
+                <li><a href="financial.html">05 Financial</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="chapter">CHAPTER 01</div>
+            <h1>About ReBatts</h1>
+            <p style="max-width: 600px; opacity: 0.85;">A clean-technology venture dedicated to achieving a 100% recovery rate of precious minerals from spent lithium-ion batteries.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="image-placeholder">
+                <div class="placeholder-text">
+                    <i>🖼️</i>
+                    <span>Figure: Battery Recycling Process Diagram<br>(Upload your image here)</span>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>The Problem</h3>
+                    <p>Global lithium resources are finite, with expected shortages by 2050 — while e-waste volumes are surging year on year.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">♻️</div>
+                    <h3>Our Response</h3>
+                    <p>We recover lithium and critical minerals with minimal environmental impact, feeding them back into the battery supply chain.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>The Opportunity</h3>
+                    <p>McKinsey confirms that sourcing recycled materials for LIB manufacturing significantly reduces carbon emissions.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h2 class="section-title">Addressing the Global Energy Crisis</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Lithium Scarcity</h3>
+                        <p>Global lithium resources are finite. Without aggressive recycling, the energy transition will be constrained by raw material bottlenecks.</p>
+                        <p style="font-size: 0.7rem; margin-top: 0.5rem; color: #8a9a8a;">Ref: Kasri et al. 2024</p>
+                    </div>
+                    <div class="card">
+                        <h3>Malaysia's E-Waste Surge</h3>
+                        <p>Malaysia's Department of Environment (DOE, 2023) documents a rapidly escalating volume of battery e-waste requiring safe, responsible disposal and recovery.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn-back">← Back to Home</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReBatts. A subsidiary of KHL Recycling.</p>
+                <p style="margin-top: 0.5rem;">Recycling Battery, Recharging the Future!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-links');
+            if (nav.style.display === 'flex') nav.style.display = 'none';
+            else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = '#15581C';
+                nav.style.padding = '1rem';
+                nav.style.textAlign = 'center';
+            }
+        });
+    </script>
+</body>
+</html>
