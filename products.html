@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | ReBatts - A Sustainable Solution to Recharge</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.5; color: #1a2a2a; background: #ffffff; }
+        
+        .navbar {
+            background: #006A38;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 0.8rem 0;
+        }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 40px; width: auto; display: block; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.85rem; }
+        .nav-links a:hover { opacity: 0.8; }
+        .mobile-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
+        
+        .page-header {
+            background: #006A38;
+            color: white;
+            padding: 120px 0 60px;
+            margin-top: 60px;
+        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .page-header .slogan { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 1rem; }
+        .page-header p { max-width: 600px; opacity: 0.85; }
+        
+        section { padding: 60px 0 40px 0; border-bottom: none; }
+        .last-section { padding-bottom: 40px; }
+        
+        .section-title { font-size: 1.6rem; font-weight: 600; margin-bottom: 1.5rem; color: #006A38; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        
+        .card {
+            background: #f5f7f5;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #006A38; font-weight: 600; }
+        .card p { font-size: 0.85rem; color: #5a6a5a; }
+        .price { font-size: 1.2rem; font-weight: 700; color: #006A38; margin-top: 0.75rem; }
+        
+        .comparison-table {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #e0e5e0;
+        }
+        .comparison-table th {
+            background: #006A38;
+            color: white;
+            font-weight: 600;
+        }
+        
+        /* Footer Styles - Optimized */
+        footer {
+            background: #004d29;
+            color: white;
+            padding: 2rem 0 1.5rem;
+            margin-top: 0;
+        }
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .footer-company h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: rgba(255,255,255,0.95);
+        }
+        .footer-company p {
+            font-size: 0.7rem;
+            margin-bottom: 0.25rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.4;
+        }
+        .footer-slogan {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        .footer-tagline {
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0;
+        }
+        
+        .btn-back { display: inline-block; background: #006A38; color: white; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; margin-top: 1rem; margin-bottom: 0; transition: opacity 0.3s; }
+        .btn-back:hover { opacity: 0.8; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu { display: block; }
+            .grid-4 { grid-template-columns: 1fr 1fr; }
+            .page-header h1 { font-size: 1.8rem; }
+            .logo img { height: 32px; }
+            .footer-main { grid-template-columns: 1fr; gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/logo3.png" alt="ReBatts Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Leadership</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Product Offerings</h1>
+            <div class="slogan">A Sustainable Solution to Recharge</div>
+            <p>Recovered metals and upcycled materials from spent LIBs</p>
+        </div>
+    </div>
+
+    <section class="last-section">
+        <div class="container">
+            <h2 class="section-title">Valuable Metals Recovered from Used LIBs</h2>
+            <div class="grid-4">
+                <div class="card">
+                    <h3>🔩 Steel</h3>
+                    <p>Casing Material</p>
+                    <div class="price">RM 1.97/kg</div>
+                </div>
+                <div class="card">
+                    <h3>⚪ Aluminium</h3>
+                    <p>Casing / Current Collectors</p>
+                    <div class="price">RM 11.89/kg</div>
+                </div>
+                <div class="card">
+                    <h3>🟡 Copper</h3>
+                    <p>Current Collectors</p>
+                    <div class="price">RM 38.30/kg</div>
+                </div>
+                <div class="card">
+                    <h3>🔋 Lithium</h3>
+                    <p>Cathode Material</p>
+                    <div class="price">RM 42.03/kg</div>
+                </div>
+                <div class="card">
+                    <h3>🔩 Nickel</h3>
+                    <p>Cathode Material</p>
+                    <div class="price">RM 69.73/kg</div>
+                </div>
+                <div class="card">
+                    <h3>🔵 Cobalt</h3>
+                    <p>Cathode Material</p>
+                    <div class="price">RM 150.01/kg</div>
+                </div>
+                <div class="card">
+                    <h3>⚫ Manganese</h3>
+                    <p>Cathode Material</p>
+                    <div class="price">RM 18.20/kg</div>
+                </div>
+            </div>
+            <div class="ref" style="text-align: center; margin-top: 1rem;">Current market prices as of July 18, 2025</div>
+
+            <h2 class="section-title" style="margin-top: 2rem;">Product Grades & Offerings</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr><th>Grade</th><th>Type</th><th>Description</th><th>Target Clients</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Premium Grade</strong></td><td>Recycle & Upcycle</td><td>High-purity recovered metals (>99%)</td><td>Battery manufacturers</td></tr>
+                        <tr><td><strong>Standard Grade</strong></td><td>Recycle & Upcycle</td><td>Processed black mass & intermediate products</td><td>Refining companies</td></tr>
+                        <tr><td><strong>Basic Grade</strong></td><td>Direct Resell</td><td>Sorted battery components & casings</td><td>Secondary recycling facilities</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ref">Table 3: ReBatts product offerings tailored to different client needs</div>
+
+            <a href="index.html" class="btn-back">← Back to Home</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-slogan">♻️ A Sustainable Solution to Recharge</div>
+            <div class="footer-main">
+                <div class="footer-company">
+                    <h4>KHL RECYCLING SDN. BHD.</h4>
+                    <p>Registration No. 202301017451 (1511373-V)</p>
+                    <p>17, Jalan Pekan Baru 30A/KU01, 41050 Klang, Selangor, Malaysia</p>
+                    <p>Contact: +6019 222 3132</p>
+                </div>
+                <div class="footer-company">
+                    <h4>ReBatts</h4>
+                    <p>A subsidiary of KHL Recycling Sdn. Bhd.</p>
+                    <p>Leading the future of lithium-ion battery recycling in Malaysia</p>
+                    <p>Innovative | Sustainable | Eco-Friendly</p>
+                </div>
+            </div>
+            <div class="footer-tagline">
+                <p>Copyright © 2026 KHL Recycling Sdn. Bhd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-links');
+            if (nav.style.display === 'flex') nav.style.display = 'none';
+            else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = '#006A38';
+                nav.style.padding = '1rem';
+                nav.style.textAlign = 'center';
+            }
+        });
+    </script>
+</body>
+</html>
