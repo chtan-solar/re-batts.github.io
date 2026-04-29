@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReBatts | Sustainable Lithium-Ion Battery Recycling</title>
+    <title>ReBatts | A Sustainable Solution to Recharge</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -109,6 +109,13 @@
             line-height: 1.2;
         }
 
+        .hero-slogan {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
         .hero p {
             font-size: 1rem;
             max-width: 600px;
@@ -146,17 +153,59 @@
             font-weight: 600;
         }
 
+        /* Footer Styles */
         footer {
             background: #006A38;
             color: white;
-            padding: 2rem 0;
-            text-align: center;
+            padding: 2rem 0 1.5rem;
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .footer-company h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .footer-company p {
+            font-size: 0.7rem;
+            margin-bottom: 0.25rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.4;
         }
 
         .footer-tagline {
-            color: rgba(255,255,255,0.8);
-            margin-top: 0.5rem;
-            font-size: 0.8rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 1rem;
+        }
+
+        .footer-slogan {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-tagline strong {
+            color: rgba(255,255,255,0.9);
         }
 
         @media (max-width: 768px) {
@@ -169,11 +218,18 @@
             .hero h1 {
                 font-size: 2rem;
             }
+            .hero-slogan {
+                font-size: 1rem;
+            }
             .nav-grid {
                 grid-template-columns: 1fr;
             }
             .logo img {
                 height: 32px;
+            }
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
     </style>
@@ -197,8 +253,9 @@
 
     <section class="hero">
         <div class="hero-container">
-            <div class="hero-badge">A SUBSIDIARY OF KHL RECYCLING</div>
-            <h1>A Sustainable Solution<br>to Recharge</h1>
+            <div class="hero-badge">A SUBSIDIARY OF KHL RECYCLING SDN. BHD.</div>
+            <h1>ReBatts</h1>
+            <div class="hero-slogan">A Sustainable Solution to Recharge</div>
             <p>ReBatts is pioneering the future of lithium-ion battery recycling — recovering precious minerals, reducing e-waste, and powering Malaysia's transition to a clean energy economy.</p>
             
             <div class="nav-grid">
@@ -222,9 +279,24 @@
     </section>
 
     <footer>
-        <div class="container">
-            <p style="font-size: 0.75rem; opacity: 0.7;">A SUBSIDIARY OF KHL RECYCLING</p>
-            <div class="footer-tagline">Recycling Battery, Recharging the Future!</div>
+        <div class="footer-container">
+            <div class="footer-slogan">♻️ A Sustainable Solution to Recharge</div>
+            <div class="footer-main">
+                <div class="footer-company">
+                    <h4>KHL RECYCLING SDN. BHD.</h4>
+                    <p>Registration No. 202301017451 (1511373-V)</p>
+                    <p>17, Jalan Pekan Baru 30A/KU01, 41050 Klang, Selangor, Malaysia</p>
+                    <p>Contact: +6019 222 3132</p>
+                </div>
+                <div class="footer-company">
+                    <h4>ReBatts (A Subsidiary of KHL Recycling)</h4>
+                    <p>Leading the future of lithium-ion battery recycling in Malaysia</p>
+                    <p>Innovative | Sustainable | Eco-Friendly</p>
+                </div>
+            </div>
+            <div class="footer-tagline">
+                <p>Copyright © 2026 KHL Recycling Sdn. Bhd. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
