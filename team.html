@@ -52,10 +52,50 @@
             background: #f5f7f5;
             border-radius: 16px;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .team-info { padding: 2rem; }
-        .team-info h3 { font-size: 1.5rem; color: #006A38; margin-bottom: 0.25rem; font-weight: 600; }
-        .team-title { color: #008A4A; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Perfect Headshot Frame Styles */
+        .team-frame {
+            margin: 0;
+            border-bottom: 1px solid #e0e5e0;
+            overflow: hidden;
+            background: #f0f2f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .team-frame img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            object-position: 50% 20%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .team-card:hover .team-frame img {
+            transform: scale(1.02);
+        }
+        
+        .team-frame .caption {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #006A38;
+            padding: 0.6rem;
+            background: #ffffff;
+            border-top: 1px solid #e0e5e0;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        
+        .team-info { padding: 1.5rem; }
         .team-degree { font-size: 0.8rem; color: #8a9a8a; margin-bottom: 1rem; }
         
         .publications { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e0e5e0; }
@@ -77,12 +117,13 @@
         .placeholder-text p { font-size: 0.8rem; margin-top: 0.5rem; }
         
         .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
-        .value-card { text-align: center; padding: 2rem; background: #f5f7f5; border-radius: 12px; }
+        .value-card { text-align: center; padding: 2rem; background: #f5f7f5; border-radius: 12px; transition: all 0.3s ease; }
+        .value-card:hover { background: #e8ede8; transform: translateY(-3px); }
         .value-icon { font-size: 2.5rem; margin-bottom: 1rem; }
         .value-card h3 { font-size: 1.2rem; margin-bottom: 0.75rem; color: #006A38; font-weight: 600; }
         .value-card p { font-size: 0.85rem; color: #5a6a5a; line-height: 1.5; }
         
-        /* Footer Styles - Optimized */
+        /* Footer Styles */
         footer {
             background: #004d29;
             color: white;
@@ -139,6 +180,7 @@
             .page-header h1 { font-size: 1.8rem; }
             .logo img { height: 32px; }
             .footer-main { grid-template-columns: 1fr; gap: 1.5rem; }
+            .team-frame img { height: 300px; object-position: 50% 25%; }
         }
     </style>
 </head>
@@ -170,51 +212,47 @@
     <section>
         <div class="container">
             <div class="team-grid">
+                <!-- Team Member 1: Dr. Mohd Muzamir Mahat -->
                 <div class="team-card">
                     <div class="team-frame">
-                        <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Muzamir.png" alt="Dr. Mohd Muzamir Mahat" style="width: 100%; height: 280px; object-fit: cover;">
-                            <figcaption style="text-align: center; font-size: 0.75rem; color: #666; padding: 0.75rem; background: #f5f7f5;">
-                                <strong>Dr. Mohd Muzamir Mahat</strong><br>
-                                Co-Founder & Chief Scientific Officer
-                            </figcaption>
-                    </div>
-                    <div class="image-placeholder">
-                        <div class="placeholder-text">
-                            <i>👨‍🔬</i>
-                            <strong>Dr. Mohd Muzamir Mahat - Headshot</strong>
-                            <p>Upload a professional headshot photo of Dr. Mohd Muzamir Mahat.</p>
+                        <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Muzamir.png" 
+                             alt="Dr. Mohd Muzamir Mahat">
+                        <div class="caption">
+                            Dr. Mohd Muzamir Mahat | Co-Founder & CSO
                         </div>
                     </div>
                     <div class="team-info">
-                        <h3>Dr. Mohd Muzamir Mahat</h3>
-                        <div class="team-title">Co-Founder / Chief Scientific Officer</div>
                         <div class="team-degree">Ph.D. Materials Science & Engineering, Imperial College London (2013–2017)</div>
-                        <p style="font-size: 0.9rem;">Principal Investigator on a <strong>RM1.2 million PETRONAS-funded project</strong> on polymer membranes for battery recycling. Panel of Expert to Malaysia's Department of Environment (DOE).</p>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Battery Recycling & Clean-Energy Innovations</p>
+                        <p style="font-size: 0.85rem;">Principal Investigator on a <strong>RM1.2 million PETRONAS-funded project</strong> on polymer membranes for battery recycling and LCA study. Panel of Expert to the Department of Environment (DOE), Malaysia (i. Blackmass Classification & ii. Recovery Process)</p>
                         <div class="publications">
-                            <p><span class="publication-title">"Integration of Solid Polymer Electrolyte for LIB Recycling"</span> (2025, Journal of Energy Storage)</p>
-                            <p><span class="publication-title">"Upscaling Lithium Recovery via Electrochemical Method"</span> (2024, RSC Advances)</p>
-                            <p><span class="publication-title">"Polymer Electrolyte Advances in LIB Recycling"</span> (2024, Journal of Electroanalytical Chemistry)</p>
+                            <p><span class="publication-title">"Integration of Solid Polymer Electrolyte Into An Efficient and Environmentally Friendly Electrochemical Approach In Lithium-ion Batteries Recycling"</span> (2025, Journal of Energy Storage)</p>
+                            <p><span class="publication-title">"Addressing Preliminary Challenges In Upscaling The Recovery of Lithium From Spent Lithium-ion Batteries By The Electrochemical Method: A Review"</span> (2024, RSC Advances)</p>
+                            <p><span class="publication-title">"Exploring The Frontiers of Polymer Electrolyte: Pioneering Advances in Lithium-ion Batteries Recycling"</span> (2024, Journal of Electroanalytical Chemistry)</p>
+                            <p><span class="publication-title">"Utilizing Membrane Technologies In Advancing The Recycling Of Spent Lithium-ion Batteries Using Green Electrochemical Method – A Review"</span> (2023, Materials Research Proceedings)</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Team Member 2: Dr. Ching-Hong Tan -->
                 <div class="team-card">
-                    <div class="image-placeholder">
-                        <div class="placeholder-text">
-                            <i>👨‍🔬</i>
-                            <strong>Dr. Ching-Hong Tan - Headshot</strong>
-                            <p>Upload a professional headshot photo of Dr. Ching-Hong Tan.</p>
+                    <div class="team-frame">
+                        <img src="https://chtan-solar.github.io/re-batts.github.io/assets/dr-chinghong.jpg" 
+                             alt="Dr. Ching-Hong Tan">
+                        <div class="caption">
+                            Dr. Ching-Hong Tan | Founder & CEO
                         </div>
                     </div>
                     <div class="team-info">
-                        <h3>Dr. Ching-Hong Tan</h3>
-                        <div class="team-title">Founder / Chief Executive Officer</div>
                         <div class="team-degree">Ph.D. Physical Chemistry, Imperial College London (2013-2017)</div>
-                        <p style="font-size: 0.9rem;">Over <strong>10 years</strong> in renewable energy, battery materials, and green technology. <strong>30+ publications</strong> in high-impact journals including Nature Communications, Advanced Materials.</p>
+                        <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Over <strong>10 years</strong> in renewable energy, battery materials, recycling chemistry, and green technology. Postdoctoral fellow at Shanghai Jiao Tong University and South China University of Technology.</p>
+                        <p style="font-size: 0.85rem;"><strong>30+ publications</strong> in high-impact journals including Advanced Materials and Advanced Energy Materials</p>
                         <div class="publications">
-                            <p><span class="publication-title">"High-Efficiency P3HT-based Polymer Solar Cells"</span> (2016, Nature Communications)</p>
-                            <p><span class="publication-title">"Robust Nonfullerene Solar Cells"</span> (2018, Nature Communications)</p>
-                            <p><span class="publication-title">"Side-chain Engineering for Hydrogen Evolution"</span> (2022, Polymer)</p>
+                            <p><span class="publication-title">"High-Efficiency P3HT-based Polymer Solar Cells With A New Non-fullerene Acceptor"</span> (2016, Nature Communications)</p>
+                            <p><span class="publication-title">"A Rhodanine Flanked Nonfullerene Acceptor for Solution-processed Organic Photovoltaics"</span> (2015, Journal of the American Chemical Society)</p>
+                            <p><span class="publication-title">"Robust Nonfullerene Solar Cells Approaching Unity External Quantum Efficiency Enabled by Suppression of Geminate Recombination"</span> (2018, Nature Communications)</p>
+                            <p><span class="publication-title">"π‐Extended Conjugated Polymer Acceptor Containing Thienylene–Vinylene–Thienylene Unit for High‐Performance Thick‐Film All‐Polymer Solar Cells"</span> (2021, Advanced Energy Materials)</p>
+                            <p><span class="publication-title">"Side-chain Engineering on Conjugated Porous Polymer Photocatalyst with Adenine Groups Enables High-performance Hydrogen Evolution from Water"</span> (2022, Polymer)</p>
                         </div>
                     </div>
                 </div>
@@ -225,13 +263,14 @@
     <section class="last-section">
         <div class="container">
             <h2 class="section-title">Mission & Core Values</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1rem;">ReBatts is devoted to supporting Malaysia's ESG commitments by delivering innovative, environmentally sound, and commercially viable LIB recycling solutions.</p>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1rem;">ReBatts is devoted to supporting Malaysia's ESG commitments by delivering innovative, environmentally sound, and commercially viable LIB recycling solutions that create enduring value for society, industry, and our planet.</p>
             
+            <!-- Fig 7: ESG Framework -->
             <div class="image-placeholder">
                 <div class="placeholder-text">
                     <i>🌿</i>
                     <strong>Fig 7: ESG Framework Behind ReBatts Mission</strong>
-                    <p>Upload an infographic showing Environmental, Social, and Governance (ESG) pillars.</p>
+                    <p>Upload an infographic showing Environmental, Social, and Governance (ESG) pillars with ReBatts' contributions to each.</p>
                 </div>
             </div>
 
@@ -239,25 +278,26 @@
                 <div class="value-card">
                     <div class="value-icon">💡</div>
                     <h3>Innovation</h3>
-                    <p>Pioneering cutting-edge, cost-efficient technologies for LIB recycling, making advanced batteries accessible to all.</p>
+                    <p>We pioneer cutting-edge, cost-efficient technologies for LIB recycling, making advanced, affordable batteries accessible to all.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🌍</div>
                     <h3>Environmental Protection</h3>
-                    <p>Reducing Malaysia's ecological footprint and advancing ESG and low-carbon aspirations.</p>
+                    <p>Every battery rejuvenated through our system reduces Malaysia's ecological footprint, bringing Malaysia closer to its ESG and low-carbon aspirations.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🤝</div>
                     <h3>Mutual Success</h3>
-                    <p>Creating social and environmental dividends that empower current and future generations.</p>
+                    <p>Mutual success is cultivated beyond economic terms, reaching the social and environmental dividends that empower current and future generations.</p>
                 </div>
             </div>
 
+            <!-- Fig 8: Core Values Visual -->
             <div class="image-placeholder">
                 <div class="placeholder-text">
                     <i>🎯</i>
                     <strong>Fig 8: ReBatts Core Values Visual</strong>
-                    <p>Upload a visual representation of the three core values.</p>
+                    <p>Upload a visual representation of the three core values: Innovation, Environmental Protection, and Mutual Success.</p>
                 </div>
             </div>
 
