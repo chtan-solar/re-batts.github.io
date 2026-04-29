@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology & Products | ReBatts</title>
+    <title>Technology | ReBatts - A Sustainable Solution to Recharge</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.5; color: #1a2a2a; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.5; color: #1a2a2a; background: #ffffff; }
         
         .navbar {
-            background: #15581C;
+            background: #006A38;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
         }
         .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #ffffff; text-decoration: none; }
-        .logo span { color: rgba(255,255,255,0.7); font-weight: 400; }
+        .logo img { height: 40px; width: auto; display: block; }
         .nav-links { display: flex; list-style: none; gap: 2rem; }
         .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.85rem; }
-        .nav-links a:hover, .nav-links a.active { opacity: 0.8; }
+        .nav-links a:hover { opacity: 0.8; }
         .mobile-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
         
         .page-header {
-            background: linear-gradient(135deg, #15581C 0%, #1a6a22 50%, #0e3d13 100%);
+            background: #006A38;
             color: white;
             padding: 120px 0 60px;
             margin-top: 60px;
         }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
-        .page-header h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 1rem; }
-        .page-header .chapter { color: rgba(255,255,255,0.7); font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 1rem; }
+        .page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .page-header .slogan { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 1rem; }
+        .page-header p { max-width: 600px; opacity: 0.85; }
         
-        section { padding: 60px 0; }
-        .section-title { font-size: 1.6rem; font-weight: 600; margin-bottom: 2rem; color: #15581C; }
-        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .card { background: #f5f7f5; padding: 1.5rem; border-radius: 8px; }
-        .card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; color: #15581C; font-weight: 600; }
-        .card p { font-size: 0.85rem; color: #5a6a5a; line-height: 1.6; }
+        section { padding: 60px 0 40px 0; border-bottom: none; }
+        .last-section { padding-bottom: 40px; }
+        
+        .section-title { font-size: 1.6rem; font-weight: 600; margin-bottom: 1.5rem; color: #006A38; }
         
         .comparison-table {
             overflow-x: auto;
@@ -52,61 +57,107 @@
             font-size: 0.85rem;
         }
         .comparison-table th, .comparison-table td {
-            padding: 0.75rem;
+            padding: 1rem;
             text-align: center;
             border: 1px solid #e0e5e0;
         }
         .comparison-table th {
-            background: #15581C;
+            background: #006A38;
             color: white;
             font-weight: 600;
         }
         .comparison-table tr:nth-child(even) {
             background: #f5f7f5;
         }
-        .check { color: #15581C; font-weight: bold; }
+        .check { color: #006A38; font-weight: bold; }
         
         .image-placeholder {
             background: #f5f7f5;
-            border: 1px dashed #c0ccc0;
-            border-radius: 8px;
+            border: 2px dashed #c0ccc0;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 300px;
             margin: 2rem 0;
         }
-        .placeholder-text { text-align: center; color: #8a9a8a; }
-        .placeholder-text i { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
-        .placeholder-text span { font-size: 0.8rem; }
+        .placeholder-text { text-align: center; color: #8a9a8a; max-width: 80%; }
+        .placeholder-text i { font-size: 3rem; margin-bottom: 1rem; display: block; }
+        .placeholder-text p { font-size: 0.85rem; margin-top: 0.5rem; }
         
+        .ref { font-size: 0.75rem; color: #8a9a8a; margin-top: 0.5rem; text-align: center; }
+        
+        /* Footer Styles - Optimized */
         footer {
-            background: #15581C;
+            background: #004d29;
             color: white;
-            padding: 2rem 0;
-            margin-top: 2rem;
+            padding: 2rem 0 1.5rem;
+            margin-top: 0;
         }
-        .footer-bottom { text-align: center; font-size: 0.75rem; opacity: 0.7; }
-        .btn-back { display: inline-block; background: #15581C; color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.85rem; margin-top: 2rem; }
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .footer-company h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: rgba(255,255,255,0.95);
+        }
+        .footer-company p {
+            font-size: 0.7rem;
+            margin-bottom: 0.25rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.4;
+        }
+        .footer-slogan {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        .footer-tagline {
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0;
+        }
+        
+        .btn-back { display: inline-block; background: #006A38; color: white; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; margin-top: 1rem; margin-bottom: 0; transition: opacity 0.3s; }
+        .btn-back:hover { opacity: 0.8; }
         
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .mobile-menu { display: block; }
-            .grid-2 { grid-template-columns: 1fr; }
-            .page-header h1 { font-size: 1.6rem; }
+            .page-header h1 { font-size: 1.8rem; }
+            .logo img { height: 32px; }
+            .footer-main { grid-template-columns: 1fr; gap: 1.5rem; }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Re<span>Batts</span></a>
+            <a href="index.html" class="logo">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/logo3.png" alt="ReBatts Logo">
+            </a>
             <ul class="nav-links">
-                <li><a href="about.html">01 About</a></li>
-                <li><a href="team.html">02 Team</a></li>
-                <li><a href="community.html">03 Community</a></li>
-                <li><a href="technology.html" class="active">04 Technology</a></li>
-                <li><a href="financial.html">05 Financial</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Leadership</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="products.html">Products</a></li>
             </ul>
             <div class="mobile-menu">☰</div>
         </div>
@@ -114,49 +165,67 @@
 
     <div class="page-header">
         <div class="container">
-            <div class="chapter">CHAPTER 04</div>
-            <h1>Technology & Products</h1>
-            <p style="max-width: 600px; opacity: 0.85;">Our hydrometallurgical and electrochemical recycling solutions deliver superior recovery rates with minimal environmental impact.</p>
+            <h1>Technology Comparison</h1>
+            <div class="slogan">A Sustainable Solution to Recharge</div>
+            <p>Why our electrochemical method delivers superior results</p>
         </div>
     </div>
 
-    <section>
+    <section class="last-section">
         <div class="container">
-            <h2 class="section-title">Technology Comparison: Why Our Approach Wins</h2>
-            <p style="margin-bottom: 1rem; text-align: center;">Conventional recycling methods fall short on sustainability. ReBatts deploys next-generation techniques that outperform pyrometallurgy on every critical metric.</p>
-            
+            <h2 class="section-title">Comparison: Commercial LIB Recycling Companies</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr><th>Company</th><th>Method</th><th>Recovery Rate</th><th>Environmental Impact</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Industry Average (Pyro)</td><td>Pyrometallurgy</td><td>40-50%</td><td>High emissions, toxic</td></tr>
+                        <tr><td>Industry Average (Hydro)</td><td>Hydrometallurgy</td><td>60-70%</td><td>Moderate, chemical waste</td></tr>
+                        <tr style="background: #e8f5e8;"><td><strong>ReBatts</strong></td><td><strong>Electrochemical</strong></td><td class="check"><strong>>95%</strong></td><td class="check"><strong>Minimal</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ref">Table 1: Technical comparison of commercial spent LIB recycling companies</div>
+
+            <h2 class="section-title" style="margin-top: 2rem;">Comparison: Recycling Methods</h2>
             <div class="comparison-table">
                 <table>
                     <thead>
                         <tr><th>Metric</th><th>Pyrometallurgy</th><th>Hydrometallurgy</th><th>ReBatts Electrochemical</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Lithium Recovery</td><td>Low (&lt;50%)</td><td>Moderate (60-70%)</td><td class="check">High (>95%) ✓</td></tr>
+                        <tr><td>Lithium Recovery</td><td>&lt;50%</td><td>60-70%</td><td class="check">>95% ✓</td></tr>
                         <tr><td>Energy Consumption</td><td>Very High</td><td>Moderate</td><td class="check">Low ✓</td></tr>
                         <tr><td>CO₂ Footprint</td><td>High</td><td>Moderate</td><td class="check">Minimal ✓</td></tr>
                         <tr><td>Chemical Waste</td><td>Low</td><td>High</td><td class="check">Minimal ✓</td></tr>
-                        <tr><td>Purity of Recovered Materials</td><td>Moderate</td><td>High</td><td class="check">Very High ✓</td></tr>
+                        <tr><td>Purity of Output</td><td>Moderate</td><td>High</td><td class="check">Very High ✓</td></tr>
                     </tbody>
                 </table>
             </div>
-            
-            <p style="font-size: 0.85rem; font-style: italic; text-align: center; margin: 1rem 0;">ReBatts' electrochemical process delivers maximum lithium recovery with the lowest environmental footprint — a clear competitive advantage.</p>
+            <div class="ref">Table 2: Technical comparison of LIB recycling methods</div>
 
             <div class="image-placeholder">
                 <div class="placeholder-text">
-                    <i>⚙️</i>
-                    <span>Technology Process Diagram<br>(Upload your image here)</span>
+                    <i>⚗️</i>
+                    <strong>Fig 9: Hydrometallurgical Process Schematic</strong>
+                    <p>Upload a detailed schematic. Reference: Bae et al. 2021.</p>
                 </div>
             </div>
 
-            <div class="grid-2">
-                <div class="card">
-                    <h3>🔬 Hydrometallurgical Process</h3>
-                    <p>Chemical leaching and selective precipitation to recover high-purity metals from spent batteries with minimal energy input.</p>
+            <div class="image-placeholder">
+                <div class="placeholder-text">
+                    <i>⚡</i>
+                    <strong>Fig 10: Electrochemical Method with IPN Membrane</strong>
+                    <p>Upload schematic showing electrochemical cell with IPN membrane. Reference: Kasri et al. 2024.</p>
                 </div>
-                <div class="card">
-                    <h3>⚡ Electrochemical Recovery</h3>
-                    <p>Proprietary electrochemical cells that selectively extract lithium and other valuable metals with >95% efficiency.</p>
+            </div>
+
+            <div class="image-placeholder">
+                <div class="placeholder-text">
+                    <i>🏭</i>
+                    <strong>Fig 11: ReBatts Recycling Plant & Battery Warehouse</strong>
+                    <p>Upload photos of ReBatts' established infrastructure.</p>
                 </div>
             </div>
 
@@ -165,10 +234,24 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2024 ReBatts. A subsidiary of KHL Recycling.</p>
-                <p style="margin-top: 0.5rem;">Recycling Battery, Recharging the Future!</p>
+        <div class="footer-container">
+            <div class="footer-slogan">♻️ A Sustainable Solution to Recharge</div>
+            <div class="footer-main">
+                <div class="footer-company">
+                    <h4>KHL RECYCLING SDN. BHD.</h4>
+                    <p>Registration No. 202301017451 (1511373-V)</p>
+                    <p>17, Jalan Pekan Baru 30A/KU01, 41050 Klang, Selangor, Malaysia</p>
+                    <p>Contact: +6019 222 3132</p>
+                </div>
+                <div class="footer-company">
+                    <h4>ReBatts</h4>
+                    <p>A subsidiary of KHL Recycling Sdn. Bhd.</p>
+                    <p>Leading the future of lithium-ion battery recycling in Malaysia</p>
+                    <p>Innovative | Sustainable | Eco-Friendly</p>
+                </div>
+            </div>
+            <div class="footer-tagline">
+                <p>Copyright © 2026 KHL Recycling Sdn. Bhd. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -184,7 +267,7 @@
                 nav.style.top = '60px';
                 nav.style.left = '0';
                 nav.style.right = '0';
-                nav.style.background = '#15581C';
+                nav.style.background = '#006A38';
                 nav.style.padding = '1rem';
                 nav.style.textAlign = 'center';
             }
