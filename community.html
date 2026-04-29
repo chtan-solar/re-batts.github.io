@@ -3,87 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Engagement | ReBatts</title>
+    <title>Community Engagement | ReBatts - A Sustainable Solution to Recharge</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.5; color: #1a2a2a; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.5; color: #1a2a2a; background: #ffffff; }
         
         .navbar {
-            background: #15581C;
+            background: #006A38;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
         }
         .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #ffffff; text-decoration: none; }
-        .logo span { color: rgba(255,255,255,0.7); font-weight: 400; }
+        .logo img { height: 40px; width: auto; display: block; }
         .nav-links { display: flex; list-style: none; gap: 2rem; }
         .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.85rem; }
-        .nav-links a:hover, .nav-links a.active { opacity: 0.8; }
+        .nav-links a:hover { opacity: 0.8; }
         .mobile-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
         
         .page-header {
-            background: linear-gradient(135deg, #15581C 0%, #1a6a22 50%, #0e3d13 100%);
+            background: #006A38;
             color: white;
             padding: 120px 0 60px;
             margin-top: 60px;
         }
         .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
-        .page-header h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 1rem; }
-        .page-header .chapter { color: rgba(255,255,255,0.7); font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 1rem; }
+        .page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .page-header .slogan { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 1rem; }
+        .page-header p { max-width: 600px; opacity: 0.85; }
         
-        section { padding: 60px 0; }
-        .section-title { font-size: 1.6rem; font-weight: 600; margin-bottom: 2rem; color: #15581C; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .card { background: #f5f7f5; padding: 2rem; border-radius: 8px; text-align: center; }
-        .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; color: #15581C; font-weight: 600; }
-        .card p { font-size: 0.85rem; color: #5a6a5a; line-height: 1.6; }
+        section { padding: 60px 0 0 0; }
+        .last-section { padding-bottom: 40px; }
         
         .image-placeholder {
             background: #f5f7f5;
-            border: 1px dashed #c0ccc0;
-            border-radius: 8px;
+            border: 2px dashed #c0ccc0;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 300px;
             margin: 2rem 0;
         }
-        .placeholder-text { text-align: center; color: #8a9a8a; }
-        .placeholder-text i { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
-        .placeholder-text span { font-size: 0.8rem; }
+        .placeholder-text { text-align: center; color: #8a9a8a; max-width: 80%; }
+        .placeholder-text i { font-size: 3rem; margin-bottom: 1rem; display: block; }
+        .placeholder-text p { font-size: 0.85rem; margin-top: 0.5rem; }
         
-        footer {
-            background: #15581C;
-            color: white;
-            padding: 2rem 0;
-            margin-top: 2rem;
+        .school-card {
+            background: #f5f7f5;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
         }
-        .footer-bottom { text-align: center; font-size: 0.75rem; opacity: 0.7; }
-        .btn-back { display: inline-block; background: #15581C; color: white; padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.85rem; margin-top: 2rem; }
+        .school-card h3 { color: #006A38; font-size: 1.3rem; margin-bottom: 1rem; }
+        
+        /* Footer Styles - Optimized */
+        footer {
+            background: #004d29;
+            color: white;
+            padding: 2rem 0 1.5rem;
+            margin-top: 0;
+        }
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .footer-company h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: rgba(255,255,255,0.95);
+        }
+        .footer-company p {
+            font-size: 0.7rem;
+            margin-bottom: 0.25rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.4;
+        }
+        .footer-slogan {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        .footer-tagline {
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0;
+        }
+        
+        .btn-back { display: inline-block; background: #006A38; color: white; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; margin-top: 1rem; margin-bottom: 0; transition: opacity 0.3s; }
+        .btn-back:hover { opacity: 0.8; }
         
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .mobile-menu { display: block; }
-            .grid-3 { grid-template-columns: 1fr; }
-            .page-header h1 { font-size: 1.6rem; }
+            .page-header h1 { font-size: 1.8rem; }
+            .logo img { height: 32px; }
+            .footer-main { grid-template-columns: 1fr; gap: 1.5rem; }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Re<span>Batts</span></a>
+            <a href="index.html" class="logo">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/logo3.png" alt="ReBatts Logo">
+            </a>
             <ul class="nav-links">
-                <li><a href="about.html">01 About</a></li>
-                <li><a href="team.html">02 Team</a></li>
-                <li><a href="community.html" class="active">03 Community</a></li>
-                <li><a href="technology.html">04 Technology</a></li>
-                <li><a href="financial.html">05 Financial</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Leadership</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="products.html">Products</a></li>
             </ul>
             <div class="mobile-menu">☰</div>
         </div>
@@ -91,36 +145,35 @@
 
     <div class="page-header">
         <div class="container">
-            <div class="chapter">CHAPTER 03</div>
             <h1>Community Engagement</h1>
-            <p style="max-width: 600px; opacity: 0.85;">ReBatts believes that lasting impact goes beyond the lab and the factory floor — actively engaging Malaysia's communities, industry partners, and policymakers.</p>
+            <div class="slogan">A Sustainable Solution to Recharge</div>
+            <p>E-Waste Recycling Awareness at Schools - Inspiring the next generation</p>
         </div>
     </div>
 
-    <section>
+    <section class="last-section">
         <div class="container">
-            <div class="image-placeholder">
-                <div class="placeholder-text">
-                    <i>🤝</i>
-                    <span>Community Engagement Activities<br>(Upload your image here)</span>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">At ReBatts, we do outreach at schools to inspire students to start regulating and recycling their E-waste and batteries for a cleaner, greener future.</p>
+
+            <div class="school-card">
+                <h3>🏫 Sekolah Menengah Kebangsaan Sungai Besar, Sabak Bernam</h3>
+                <div class="image-placeholder">
+                    <div class="placeholder-text">
+                        <i>📸</i>
+                        <strong>School Outreach Photo 1</strong>
+                        <p>Upload a photo from the SMK Sungai Besar outreach event.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon">🏭</div>
-                    <h3>Industry Partnerships</h3>
-                    <p>Collaborating with manufacturers, fleet operators, and OEMs to establish structured battery return and recycling programs.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📋</div>
-                    <h3>Policy Engagement</h3>
-                    <p>Working alongside Malaysia's DOE and regulatory bodies to shape best-practice frameworks for battery classification and recovery.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📚</div>
-                    <h3>Public Education</h3>
-                    <p>Raising awareness of responsible battery disposal and the environmental stakes of unchecked e-waste growth across Malaysia.</p>
+            <div class="school-card">
+                <h3>🏫 Sekolah Menengah Kebangsaan Seksyen 18, Shah Alam</h3>
+                <div class="image-placeholder">
+                    <div class="placeholder-text">
+                        <i>📸</i>
+                        <strong>School Outreach Photo 2</strong>
+                        <p>Upload a photo from the SMK Seksyen 18 outreach event.</p>
+                    </div>
                 </div>
             </div>
 
@@ -129,10 +182,24 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2024 ReBatts. A subsidiary of KHL Recycling.</p>
-                <p style="margin-top: 0.5rem;">Recycling Battery, Recharging the Future!</p>
+        <div class="footer-container">
+            <div class="footer-slogan">♻️ A Sustainable Solution to Recharge</div>
+            <div class="footer-main">
+                <div class="footer-company">
+                    <h4>KHL RECYCLING SDN. BHD.</h4>
+                    <p>Registration No. 202301017451 (1511373-V)</p>
+                    <p>17, Jalan Pekan Baru 30A/KU01, 41050 Klang, Selangor, Malaysia</p>
+                    <p>Contact: +6019 222 3132</p>
+                </div>
+                <div class="footer-company">
+                    <h4>ReBatts</h4>
+                    <p>A subsidiary of KHL Recycling Sdn. Bhd.</p>
+                    <p>Leading the future of lithium-ion battery recycling in Malaysia</p>
+                    <p>Innovative | Sustainable | Eco-Friendly</p>
+                </div>
+            </div>
+            <div class="footer-tagline">
+                <p>Copyright © 2026 KHL Recycling Sdn. Bhd. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -148,7 +215,7 @@
                 nav.style.top = '60px';
                 nav.style.left = '0';
                 nav.style.right = '0';
-                nav.style.background = '#15581C';
+                nav.style.background = '#006A38';
                 nav.style.padding = '1rem';
                 nav.style.textAlign = 'center';
             }
