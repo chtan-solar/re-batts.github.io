@@ -48,14 +48,62 @@
         .section-title { font-size: 1.6rem; font-weight: 600; margin-bottom: 1.5rem; color: #006A38; }
         .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
         
-        .card {
+        /* Material Card Styles */
+        .material-card {
             background: #f5f7f5;
             padding: 1.5rem;
             border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e5e0;
         }
-        .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #006A38; font-weight: 600; }
-        .card p { font-size: 0.85rem; color: #5a6a5a; }
-        .price { font-size: 1.2rem; font-weight: 700; color: #006A38; margin-top: 0.75rem; }
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-color: #006A38;
+        }
+        .material-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .material-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #006A38;
+            font-weight: 600;
+        }
+        .material-card p {
+            font-size: 0.8rem;
+            color: #5a6a5a;
+            line-height: 1.4;
+        }
+        
+        /* Image Frame for Recycling Process */
+        .process-image-frame {
+            margin: 2rem 0;
+            border: 1px solid #e0e5e0;
+            border-radius: 16px;
+            padding: 1rem;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .process-image-frame img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+        .process-image-frame .caption {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 1rem;
+            padding: 0 0.5rem;
+        }
+        .process-image-frame .caption strong {
+            color: #006A38;
+            font-weight: 600;
+        }
         
         .comparison-table {
             overflow-x: auto;
@@ -76,8 +124,11 @@
             color: white;
             font-weight: 600;
         }
+        .comparison-table tr:nth-child(even) {
+            background: #f5f7f5;
+        }
         
-        /* Footer Styles - Optimized */
+        /* Footer Styles */
         footer {
             background: #004d29;
             color: white;
@@ -130,10 +181,14 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .mobile-menu { display: block; }
-            .grid-4 { grid-template-columns: 1fr 1fr; }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
             .page-header h1 { font-size: 1.8rem; }
             .logo img { height: 32px; }
             .footer-main { grid-template-columns: 1fr; gap: 1.5rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .grid-4 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -158,52 +213,81 @@
         <div class="container">
             <h1>Product Offerings</h1>
             <div class="slogan">A Sustainable Solution to Recharge</div>
-            <p>Recovered metals and upcycled materials from spent LIBs</p>
+            <p>Recovered materials from spent lithium-ion batteries through our eco-friendly recycling process</p>
         </div>
     </div>
 
     <section class="last-section">
         <div class="container">
-            <h2 class="section-title">Valuable Metals Recovered from Used LIBs</h2>
+            <!-- Materials Recovered - No Prices -->
+            <h2 class="section-title">Materials We Recover</h2>
             <div class="grid-4">
-                <div class="card">
-                    <h3>🔩 Steel</h3>
-                    <p>Casing Material</p>
-                    <div class="price">RM 1.97/kg</div>
+                <div class="material-card">
+                    <div class="material-icon">🔩</div>
+                    <h3>Steel</h3>
+                    <p>Casing material recovered from battery housings</p>
                 </div>
-                <div class="card">
-                    <h3>⚪ Aluminium</h3>
-                    <p>Casing / Current Collectors</p>
-                    <div class="price">RM 11.89/kg</div>
+                <div class="material-card">
+                    <div class="material-icon">⚪</div>
+                    <h3>Aluminium</h3>
+                    <p>Casing and current collector material</p>
                 </div>
-                <div class="card">
-                    <h3>🟡 Copper</h3>
-                    <p>Current Collectors</p>
-                    <div class="price">RM 38.30/kg</div>
+                <div class="material-card">
+                    <div class="material-icon">🟡</div>
+                    <h3>Copper</h3>
+                    <p>High-purity copper from current collectors</p>
                 </div>
-                <div class="card">
-                    <h3>🔋 Lithium</h3>
-                    <p>Cathode Material</p>
-                    <div class="price">RM 42.03/kg</div>
+                <div class="material-card">
+                    <div class="material-icon">🔋</div>
+                    <h3>Lithium</h3>
+                    <p>Critical cathode material for new batteries</p>
                 </div>
-                <div class="card">
-                    <h3>🔩 Nickel</h3>
-                    <p>Cathode Material</p>
-                    <div class="price">RM 69.73/kg</div>
+                <div class="material-card">
+                    <div class="material-icon">🔩</div>
+                    <h3>Nickel</h3>
+                    <p>Valuable cathode material</p>
                 </div>
-                <div class="card">
-                    <h3>🔵 Cobalt</h3>
-                    <p>Cathode Material</p>
-                    <div class="price">RM 150.01/kg</div>
+                <div class="material-card">
+                    <div class="material-icon">🔵</div>
+                    <h3>Cobalt</h3>
+                    <p>High-value cathode material</p>
                 </div>
-                <div class="card">
-                    <h3>⚫ Manganese</h3>
-                    <p>Cathode Material</p>
-                    <div class="price">RM 18.20/kg</div>
+                <div class="material-card">
+                    <div class="material-icon">⚫</div>
+                    <h3>Manganese</h3>
+                    <p>Cathode material for battery production</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">♻️</div>
+                    <h3>Black Mass</h3>
+                    <p>Mixed recovered materials for further refining</p>
                 </div>
             </div>
-            <div class="ref" style="text-align: center; margin-top: 1rem;">Current market prices as of July 18, 2025</div>
 
+            <!-- IMAGE: Battery Recycling Process Flow -->
+            <div class="process-image-frame">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/recycling-process-image.jpg" 
+                     alt="Lithium-ion battery recycling process flow diagram showing material recovery"
+                     style="width: 100%; height: auto; border-radius: 12px;">
+                <div class="caption">
+                    <strong>Figure:</strong> Complete material recovery process from spent lithium-ion batteries - from collection to refined materials ready for new battery production.
+                </div>
+            </div>
+
+            <!-- Alternate: If you have separate images for each material -->
+            <h2 class="section-title" style="margin-top: 2rem;">Our Recycling Process</h2>
+            
+            <!-- IMAGE: Material Recovery Chart/Infographic -->
+            <div class="process-image-frame">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/material-recovery-infographic.jpg" 
+                     alt="Infographic showing different materials recovered from LIB recycling"
+                     style="width: 100%; height: auto; border-radius: 12px;">
+                <div class="caption">
+                    <strong>Infographic:</strong> Types of valuable materials recovered through ReBatts' electrochemical recycling process.
+                </div>
+            </div>
+
+            <!-- Product Grades Table -->
             <h2 class="section-title" style="margin-top: 2rem;">Product Grades & Offerings</h2>
             <div class="comparison-table">
                 <table>
@@ -211,13 +295,25 @@
                         <tr><th>Grade</th><th>Type</th><th>Description</th><th>Target Clients</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td><strong>Premium Grade</strong></td><td>Recycle & Upcycle</td><td>High-purity recovered metals (>99%)</td><td>Battery manufacturers</td></tr>
-                        <tr><td><strong>Standard Grade</strong></td><td>Recycle & Upcycle</td><td>Processed black mass & intermediate products</td><td>Refining companies</td></tr>
-                        <tr><td><strong>Basic Grade</strong></td><td>Direct Resell</td><td>Sorted battery components & casings</td><td>Secondary recycling facilities</td></tr>
+                        <tr><td><strong>Premium Grade</strong></td><td style="background: #e8f5e8;">Recycle & Upcycle</td><td>High-purity recovered metals (>99%) suitable for direct battery manufacturing</td><td>Battery manufacturers</td></tr>
+                        <tr><td><strong>Standard Grade</strong></td><td style="background: #e8f5e8;">Recycle & Upcycle</td><td>Processed black mass and intermediate products for further refining</td><td>Refining companies</td></tr>
+                        <tr><td><strong>Basic Grade</strong></td><td>Direct Resell</td><td>Sorted battery components and casings for secondary recycling</td><td>Secondary recycling facilities</td></tr>
                     </tbody>
                 </table>
             </div>
-            <div class="ref">Table 3: ReBatts product offerings tailored to different client needs</div>
+            <div class="ref" style="text-align: center; font-size: 0.75rem; color: #8a9a8a; margin-top: 0.5rem;">
+                Table: ReBatts product offerings tailored to different client needs
+            </div>
+
+            <!-- IMAGE: End Products Showcase -->
+            <div class="process-image-frame">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/end-products-showcase.jpg" 
+                     alt="Showcase of end products made from recycled battery materials"
+                     style="width: 100%; height: auto; border-radius: 12px;">
+                <div class="caption">
+                    <strong>Showcase:</strong> End products manufactured using materials recovered by ReBatts' recycling process.
+                </div>
+            </div>
 
             <a href="index.html" class="btn-back">← Back to Home</a>
         </div>
