@@ -24,7 +24,14 @@
             z-index: 1000;
             padding: 0.8rem 0;
         }
-        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .logo img { height: 40px; width: auto; display: block; }
         .nav-links { display: flex; list-style: none; gap: 2rem; }
         .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 0.85rem; }
@@ -37,7 +44,11 @@
             padding: 120px 0 60px;
             margin-top: 60px;
         }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
         .page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
         .page-header .slogan { font-size: 1rem; opacity: 0.8; font-style: italic; margin-bottom: 1rem; }
         .page-header p { max-width: 600px; opacity: 0.85; }
@@ -75,18 +86,24 @@
         
         .ref { font-size: 0.75rem; color: #8a9a8a; margin-top: 0.5rem; font-style: italic; }
         
-        /* Footer Styles - Optimized */
+        /* ============================================
+           FOOTER - FULL WIDTH FIX
+        ============================================ */
         footer {
             background: #004d29;
             color: white;
             padding: 2rem 0 1.5rem;
             margin-top: 0;
+            width: 100%;
         }
+        
+        /* Footer inner content - centered with max-width */
         .footer-container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
         }
+        
         .footer-main {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -180,31 +197,27 @@
                     <p>McKinsey confirms that sourcing recycled materials for LIB manufacturing significantly reduces carbon emissions industry-wide.</p>
                 </div>
             </div>
-            <div class="image-placeholder">
-                <div class="placeholder-text">
-                    <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure1.png" alt="Global Lithium Resource Depletion Projection 2025-2050" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
-                        <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
-                                <strong>Global Lithium Resource Depletion Projection (2025-2050). Source: Kasri et al. 2024</strong>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            
+            <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure1.png" alt="Global Lithium Resource Depletion Projection 2025-2050" style="width: 100%; height: auto; object-fit: contain; border-radius: 8px;">
+                <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
+                    <strong>Global Lithium Resource Depletion Projection (2025-2050). Source: Kasri et al. 2024</strong>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
 
     <section>
         <div class="container">
             <h2 class="section-title">100% Recovery Mission</h2>
             <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">At ReBatts, our researchers and technologists aim at achieving <strong>100% recovery rate</strong> of precious minerals from used batteries using sustainable <strong>hydrometallurgical</strong> and <strong>electrochemical</strong> techniques.</p>
-            <div class="image-placeholder">
-                <div class="placeholder-text">
-                    <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure3.png" alt="Carbon Emission Reduction Through Recycled Materials" style="width: 100%; border-radius: 12px;">
-                        <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
-                            <strong>Carbon Emission Reduction Through Recycled Materials</strong>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            
+            <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure3.png" alt="Carbon Emission Reduction Through Recycled Materials" style="width: 100%; border-radius: 12px;">
+                <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
+                    <strong>Carbon Emission Reduction Through Recycled Materials</strong>
+                </figcaption>
+            </figure>
         </div>
     </section>
 
@@ -221,43 +234,33 @@
                     <p>• Low corrosiveness reagents<br>• Maximizes Li-ion recovery (>95%)<br>• Reduced energy consumption<br>• Environmentally friendly</p>
                 </div>
             </div>
-            <div class="image-placeholder">
-                <div class="placeholder-text">
-                    <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure4.png" alt="Conventional Pyrometallurgy Process" style="width: 100%; border-radius: 12px;">
-                        <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
-                            <strong>Conventional Pyrometallurgy Process</strong>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            
+            <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure4.png" alt="Conventional Pyrometallurgy Process" style="width: 100%; border-radius: 12px;">
+                <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
+                    <strong>Conventional Pyrometallurgy Process</strong>
+                </figcaption>
+            </figure>
   
-            <div class="image-placeholder">
-                <div class="placeholder-text">
-                    <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure5.png" alt="Hydrometallurgical Process Schematic" style="width: 100%; border-radius: 12px;">
-                        <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
-                            <strong>Hydrometallurgical Process</strong>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure5.png" alt="Hydrometallurgical Process Schematic" style="width: 100%; border-radius: 12px;">
+                <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
+                    <strong>Hydrometallurgical Process</strong>
+                </figcaption>
+            </figure>
 
-            <div class="image-placeholder">
-                <div class="placeholder-text">
-                    <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure6.png" alt="ReBatts Electrochemical Recovery Process" style="width: 100%; border-radius: 12px;">
-                        <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
-                            <strong>ReBatts Electrochemical Recovery Process</strong>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            <figure style="margin: 2rem 0; border: 1px solid #e0e5e0; border-radius: 12px; padding: 0.75rem; background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <img src="https://chtan-solar.github.io/re-batts.github.io/assets/Figure6.png" alt="ReBatts Electrochemical Recovery Process" style="width: 100%; border-radius: 12px;">
+                <figcaption style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 0.75rem;">              
+                    <strong>ReBatts Electrochemical Recovery Process</strong>
+                </figcaption>
+            </figure>
 
             <a href="index.html" class="btn-back">← Back to Home</a>
         </div>
     </section>
 
+    <!-- FOOTER - Full width (no container restriction on footer itself) -->
     <footer>
         <div class="footer-container">
             <div class="footer-slogan">♻️ A Sustainable Solution to Recharge</div>
